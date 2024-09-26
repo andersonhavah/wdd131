@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template: repeat(4, 1fr);
+    font-size: 1.2rem;
+    row-gap: 5vh;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+header {
+    background: lightblue;
+    grid-column: 1 / 4;
+    height: 110px;
+    text-align: center;
+}
+
+header h1 {
+    height: 70px;
+    align-self: center;
+    padding-top: 10px;
+}
+
+nav {
+    display: flex;
+    background: #413c3c;
+    justify-content: space-around;
+    height: 40px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+/* a:checked {
+    color: rgb(14, 228, 228);
+} */
+
+.anderson-photo {
+    width: auto;
+}
+
+.about-me {
+    grid-column: 1 / 3;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.about-me .about-me-heading {
+    background: #b9b9e5;
+    text-align: center;
+}
+
+.anderson-photo {
+    float: right;
+}
+
+.myself h2,
+.myself p {
+    grid-column: 1 / 2;
+}
