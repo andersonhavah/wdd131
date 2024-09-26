@@ -4,11 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Anderson Havah's Introduction Page">
+    <meta name="author" content="Anderson Havah">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <title>WDD 131 - Dynamic Web Fundamentals - Anderson Havah</title>
 </head>
 
 <body>
-    <h1>WDD 131 - Anderson</h1>
+    <header>
+        <h1>Wdd 131 - Dynamic Web Fundamentals - Anderson Havah</h1>
+        <nav>
+            <a href="https://www.linkedin.com/in/anderson-havah/">LinkedIn</a>
+            <a href="https://byui.instructure.com/">I-Learn</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures">Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2 class="about-me-heading">About Me</h2>
+            <p>My name is Anderson Havah. I was born in Lome, Togo. I currently live in Lome, Togo. I work as a
+                Technical Support Engineer. I am currently studying software development in order to become a
+                software
+                developer. I am passionate about technology, science, business, education...
+            </p>
+            <aside class="anderson-photo">
+                <img src="images/andersonPicture.jpg" alt="Anderson Havah Picture">
+            </aside>
+
+            <div class="country">
+                <h2 class="city-country">Lome, Togo</h2>
+                <br>
+                <figure>
+                    <img src="images/Flag_of_Togo.jpg" alt="The flag of Togo">
+                    <figcaption>Official Flag of Togo</figcaption>
+                </figure>
+                <p>Togo, a West African nation on the Gulf of Guinea, is known for its palm-lined beaches and hilltop
+                    villages. Koutammakou, inhabited by the Batammariba people, is a traditional settlement of
+                    fortresslike
+                    clay huts dating to the 17th century. Togo has a diverse cuisine influenced by its geographic
+                    location
+                    and cultural heritage. It is known for its vibrant music scene, with various music styles such as
+                    highlife, Afrobeat, and traditional rhythms like Ewe and Kabye. Togo is a multilingual country, with
+                    French being the official language.
+                    Staple foods in Togolese cuisine include maize, rice, millet, cassava, yam, plantain and beans.
+                    Maize is
+                    the most commonly consumed food in the Togolese Republic. Fish is a significant source of protein.
+                </p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+            <ul>
+                <li>CSS Tricks</li>
+                <li>W3 Schools</li>
+                <li>Udemy</li>
+                <li>LinkedIn Learning</li>
+                <li>O'reilly</li>
+                <li>Scrimba</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> - Anderson Havah - Togo</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/getdates.js"></script>
 </body>
 
 </html>
