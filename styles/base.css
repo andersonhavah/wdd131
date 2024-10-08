@@ -134,19 +134,3 @@ footer {
     background: #beec8f;
     padding: 10px;
 }
-
-@media screen and (min-width: 400px) {
-    header h1 {
-        display: ;
-        height: 70px;
-        padding-top: 10px;
-        font-size: 1.2em;
-        text-align: center;
-    }
-
-    nav {
-        display: flex;
-        flex: 1 1 100%;
-    }
-
-}
