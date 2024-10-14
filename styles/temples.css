@@ -1,7 +1,7 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -10,14 +10,15 @@ body {
 
 header {
     background-color: #6bd1eb;
-	display: grid;
-	grid-gap: 1rem;
-	padding: 20px;
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	box-shadow: 0 0 30px #6bd1eb;
+    display: grid;
+    grid-gap: 1rem;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px #6bd1eb;
 }
 
-header, main {
+header,
+main {
     margin: 0 auto;
     max-width: 500px;
 }
@@ -28,22 +29,22 @@ h1 {
 
 nav {
     display: flex;
-	flex-direction: column;
+    flex-direction: column;
     font-size: 1.1rem;
 }
 
 nav a {
-	display: block;
-	color: #000000;
-	text-align: center;
-	padding: 1rem;
-	text-decoration: none;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
 }
 
 nav a:hover {
-	text-decoration: wavy double;
-	background-color: #eee;
-	color: #000;
+    text-decoration: wavy double;
+    background-color: #eee;
+    color: #000;
 }
 
 nav ul {
@@ -51,7 +52,7 @@ nav ul {
 }
 
 main {
-    max-width: 400px;
+    max-width: 500px;
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -71,6 +72,10 @@ main figure img {
     width: 100%;
 }
 
+main figure {
+    margin: 0 auto;
+}
+
 footer {
     max-width: 500px;
     background: #6bd1eb;
@@ -78,4 +83,5 @@ footer {
     text-align: center;
     margin: 0 auto;
     margin-top: 1rem;
+    padding: 5px;
 }
