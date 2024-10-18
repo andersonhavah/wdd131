@@ -8,10 +8,9 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* Header */
 header {
     background-color: #6bd1eb;
-    /* display: grid;
-    gap: 1rem; */
     padding: 20px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 30px #6bd1eb;
@@ -28,6 +27,7 @@ h1 {
     font-size: 2rem;
 }
 
+/* Navigation */
 nav {
     display: flex;
     flex-direction: column;
@@ -35,7 +35,8 @@ nav {
 }
 
 nav a {
-    display: block;
+    /* display: block; */
+    display: none;
     color: #000000;
     text-align: center;
     padding: 1rem;
@@ -51,11 +52,32 @@ nav ul {
     list-style: none;
 }
 
-main {}
-
 main h2 {
     text-align: center;
-    margin-top: 1rem;
+    margin: 1rem;
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #000;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❎";
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+    display: block;
 }
 
 .image-container {

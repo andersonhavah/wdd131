@@ -1,4 +1,4 @@
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
 
     header,
     main,
@@ -30,6 +30,7 @@
     nav a {
         text-decoration: none;
         text-align: center;
+        display: inline-block;
     }
 
     nav ul {
@@ -49,6 +50,10 @@
 
     main h2 {
         text-align: center;
+    }
+
+    #menu {
+        display: none;
     }
 
     footer {
