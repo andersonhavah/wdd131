@@ -10,17 +10,18 @@ body {
 
 header {
     background-color: #6bd1eb;
-    display: grid;
-    grid-gap: 1rem;
+    /* display: grid;
+    gap: 1rem; */
     padding: 20px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 30px #6bd1eb;
 }
 
 header,
-main {
+main,
+footer {
     margin: 0 auto;
-    max-width: 500px;
+    max-width: 450px;
 }
 
 h1 {
@@ -42,7 +43,6 @@ nav a {
 }
 
 nav a:hover {
-    text-decoration: wavy double;
     background-color: #eee;
     color: #000;
 }
@@ -51,33 +51,33 @@ nav ul {
     list-style: none;
 }
 
-main {
-    max-width: 500px;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-}
+main {}
 
 main h2 {
     text-align: center;
     margin-top: 1rem;
 }
 
-main figure figcaption {
+.image-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+main .image-container figure figcaption {
     text-align: center;
     margin-top: 0.5rem;
 }
 
-main figure img {
-    width: 100%;
+main .image-container figure img {
+    max-width: 350px;
 }
 
-main figure {
+main .image-container figure {
     margin: 0 auto;
 }
 
 footer {
-    max-width: 500px;
     background: #6bd1eb;
     height: 50px;
     text-align: center;
