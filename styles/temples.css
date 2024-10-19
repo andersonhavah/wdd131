@@ -76,6 +76,10 @@ main h2 {
     content: "X";
 }
 
+.active::before { 
+	content: "📍";  /* just a wayfinding symbol for the user */
+}
+
 /* when the button is clicked - the open class is toggled (added/removed) */
 .open a {
     display: block;

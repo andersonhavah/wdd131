@@ -33,19 +33,15 @@
         display: inline-block;
     }
 
-    nav ul {
-        list-style: none;
-    }
-
     main {
-        max-width: 1200px;
+        max-width: 1100px;
         margin: 0 auto;
     }
 
     .image-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
+        gap: 1rem;
     }
 
     main h2 {
