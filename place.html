@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
+<!-- This is the head -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Togo</title>
-    <meta name="description"
-        content="The country where I live is Togo. Togo is a cool and vibrant country where the food exquisite and delicious.">
+    <title>Togo - A Country in West Africa</title>
+    <meta name="description" content="The country where I live is Togo. Togo is a cool and vibrant country where the food exquisite and delicious.">
     <meta name="author" content="Anderson Havah">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,14 +16,52 @@
     <script src="scripts/place.js" defer></script>
 </head>
 
+<!-- This is the body -->
 <body>
+    <!-- This is the header -->
     <header>
         <h1>Togo</h1>
     </header>
 
+    <!-- This is the main -->
     <main>
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 1000px)" srcset="images/hero-large.webp">
+                <source media="(min-width: 500px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-small.webp" alt="A togolese lovely beach with coconut trees" width="500" height="250">
+            </picture>
+        </div>
 
+        <section class="data">
+            <h2>Data</h2>
+            <p><strong>Area: </strong>56,785 km <sup>2</sup><br>
+                <strong>Population: </strong>8,703,961<br>
+                <strong>Capital: </strong>Lome<br>
+                <strong>Languages: </strong>Ewe, Mina, French, Kabye, Kotokoli<br>
+                <strong>Currency: </strong> West African CFA franc (XOF)<br>
+                <strong>Time Zone: </strong>UTC<br>
+                <strong>Calling Code: </strong>+228<br>
+                <strong>Internet TLD: </strong>.tg<br>
+            </p>
+        </section>
+
+        <section class="weather">
+            <h2>Weather</h2>
+            <img src="images/sunny_temperature_icon.svg" alt="">
+            <p><strong>Temperature: </strong>30&deg;C<br>
+                <strong>Conditions: </strong>Sunny<br>
+                <strong>Wind: </strong>Lome<br>
+                <strong>Wind Chill: </strong>Ewe, Mina, French, Kabye, Kotokoli<br>
+            </p>
+        </section>
     </main>
+
+    <!-- This is the footer -->
+    <footer>
+        <p>&copy; <span id="currentYear"></span> - Anderson Havah - Togo</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 
 </html>
