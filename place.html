@@ -25,6 +25,7 @@
 
     <!-- This is the main -->
     <main>
+        <div class="flag-color-one"></div>
         <div class="hero">
             <picture>
                 <source media="(min-width: 1000px)" srcset="images/hero-large.webp">
@@ -48,12 +49,13 @@
 
         <section class="weather">
             <h2>Weather</h2>
-            <img src="images/sunny_temperature_icon.svg" alt="">
+            <img src="images/sunny_temperature_icon.svg" alt="A sunny temperature icon">
             <p><strong>Temperature: </strong>30&deg;C<br>
                 <strong>Conditions: </strong>Sunny<br>
-                <strong>Wind: </strong>Lome<br>
-                <strong>Wind Chill: </strong>Ewe, Mina, French, Kabye, Kotokoli<br>
-            </p>
+                <strong>Wind: </strong>11 Km/h <br>
+                <strong class="wind-chill">Wind Chill: </strong><span id="windChill"></span><br>
+            </p>    
+
         </section>
     </main>
 
