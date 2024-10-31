@@ -7,9 +7,7 @@
         content: "☀️"; /* Replace with your desired weather icon */
         display: inline; /* Ensure it aligns properly */
         margin-left: 10px; /* Space between heading and icon */
-        font-size: 1.5em; /* Adjust size as needed */
-        width: 10px;
-        height: 10px;
+        font-size: 1em; 
     }
 
     .data, .weather {
@@ -30,9 +28,18 @@
         right: 15px
     }
 
+    .weather p {
+        margin: 0;
+    }
+
     .data h2, .weather h2 {
         background: rgb(211, 7, 49);
         color: white;
     }
 
+    .hero img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
 }
