@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.2rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+/* Header */
+header {
+    background: lightblue;
+    height: 110px;
+    text-align: center;
+}
+
+header h1 {
+    height: 70px;
+    align-self: center;
+    padding-top: 10px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    background: #413c3c;
+    justify-content: space-around;
+    height: 40px;
+    align-items: center;
+}
+
+nav a:hover {
+    text-decoration: overline;
+    background: rgb(162, 196, 94);
+    color: black;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+
+}
+
+/* Main */
+main {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 20px;
+    max-width: 100%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card.one {
+    border: 3px solid #000000;
+    border-radius: 10px;
+}
+
+.about-me-content {
+    margin: 15px;
+    max-width: 600px;
+    float: left;
+}
+
+hr {
+    margin: 20px;
+}
+
+.anderson-photo img {
+    width: 30%;
+}
+
+.country img {
+    width: 30%;
+    float: left;
+    margin: 10px;
+}
+
+.country figure figcaption {
+    max-width: 30%;
+    font-style: italic;
+    text-align: center;
+}
+
+.about-me-heading {
+    text-align: center;
+}
+
+.card.two {
+    border: 3px solid #000000;
+    border-radius: 10px;
+}
+
+.card.two ul {
+    text-align: center;
+    list-style: none;
+    padding: 180px 0;
+}
+
+.about-me-heading {
+    background: lightblue;
+}
+
+.card.two h2 {
+    background: lightblue;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.city-country {
+    text-align: center;
+    margin: 20px;
+}
+
+.country p {
+    margin: 20px;
+    max-width: 60%;
+    float: right;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #beec8f;
+    padding: 10px;
+}
