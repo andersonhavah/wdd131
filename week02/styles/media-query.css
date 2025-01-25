@@ -6,8 +6,8 @@ header, main, footer {
     max-width: 640px;
     margin: 1rem auto;
     padding: 1rem;
-    background-color: #cfe2f3; /* A soft blueish background */
-    border: 1px solid #a1c4e3; /* A faint border */
+    background-color: #cfe2f3; 
+    border: 1px solid #a1c4e3; 
 }
 
 main {
