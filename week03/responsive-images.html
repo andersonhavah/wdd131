@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images</title>
+    <meta name="description" content="The example of responsive images implementation.">
+    <meta name="author" content="Anderson Havah">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/responsive-images.css">
+</head>
+
+<body>
+    <!-- Emmet Shorthand (enter syntax + tab): main>div.hero>picture>source:media*2+img -->
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 1000px)" srcset="images/hero-large.webp">
+                <source media="(min-width: 500px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-small.webp"
+                    alt="The Church of Jesus Christ of Latter-Day Saints' Nashville Tennessee Temple" width="500" height="250">
+            </picture>
+        </div>
+    </main>
+</body>
+
+</html>
