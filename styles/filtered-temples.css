@@ -87,21 +87,25 @@ main h2 {
 
 .image-container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 0.5rem;
 }
 
-main .image-container figure figcaption {
+main .image-container {
     text-align: center;
     margin-top: 0.5rem;
 }
 
-main .image-container figure img {
-    max-width: 292px;
+main .image-container img {
+    width: 300px;
+    height: auto;
+    margin: .5rem;
+    box-shadow: 0 0 30px #777;
 }
 
-main .image-container figure {
-    margin: 0 auto;
+.temple-card {
+    background-color: #eee;
+    border: 1px solid rgba(0, 0, 0, .1);
 }
 
 /* Footer */
