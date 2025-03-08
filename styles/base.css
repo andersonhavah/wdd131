@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'roboto', sans-serif;
+}
+
+
+/* Header */
+header {
+    background: #0E5D50;
+    color: #ffffff;
+    text-align: center;
+    height: auto;
+    font-size: 1.2rem;
+}
+
+header h1 {
+    height: auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Navigation */
+nav {
+    background: #000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    height: 40px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #000000;
+    background-color: #00ffff;
+}
+
+/* Main */
+main {
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.about-me-container {
+    display: flex;
+    align-items: center; /* Vertically center text and image */
+}
+
+.about-me-content {
+    margin-right: 20px; /* Space between text and image */
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 60%; /* Limit text width */
+}
+
+.anderson-photo img {
+    width: 200px; /* Set a specific width for the image */
+    height: auto;
+    border: 1px solid #0E5D50;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.country img {
+    width: 200px;
+    margin: 1rem auto;
+}
+
+.card-one {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 0 0 1rem 0;
+    margin: 1rem;
+    grid-column: 1 / 2 ;
+    width: 900px;
+}
+
+.card-one p {
+    padding: 1rem;
+}
+
+.about-me-heading {
+    text-align: center;
+    background-color: #0E5D50;
+    color: #ffffff;
+    padding: 0.7rem;
+}
+
+.country h2 {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+hr {
+    border: 1px solid #0E5D50;
+    margin: 1rem auto;
+    width: 80%;
+}
+
+.card-one, .card-two {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 5px solid #2c8576;
+}
+
+.card-two {
+    margin: 1rem;
+    grid-column: 2 / 3;
+}
+
+.card-two ul {
+    list-style-position: inside;
+    padding: 1rem;
+    line-height: 1.6;
+    margin-top: 7rem;
+}
+
+.card-two ul li {
+    padding: 0.5rem;
+}
+
+.card-two h2 {
+    text-align: center;
+    background-color: #0E5D50;
+    color: #ffffff;
+    padding: 0.7rem;
+}
+
+.country p {
+    line-height: 1.6;
+    font-size: 18px;
+    direction: ltr;
+}
+
+.country figure {
+    margin: 2rem;
+    float: left;
+    border: 2px solid #0E5D50;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.country figure img {
+    width: 200px;
+    height: auto;
+    border: 1px solid #0E5D50;
+    border-radius: 5px;
+}
+
+.country figure figcaption {
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #0E5D50;
+    color: #ffffff;
+    text-align: center;
+    grid-column: 1 / 4;
+    height: auto;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
