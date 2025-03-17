@@ -91,6 +91,16 @@ main h2 {
     gap: 0.5rem;
 }
 
+main .image-container img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid #000;
+    border-radius: 5px;
+    transition: transform 0.5s;
+}
+
 main .image-container figure figcaption {
     text-align: center;
     margin-top: 0.5rem;
