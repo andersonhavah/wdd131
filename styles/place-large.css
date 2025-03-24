@@ -1,0 +1,45 @@
+@media screen and (min-width: 600px) {
+    .weather img {
+        display: none;
+    }
+
+    .weather h2::after {
+        content: "☀️"; /* Replace with your desired weather icon */
+        display: inline; /* Ensure it aligns properly */
+        margin-left: 10px; /* Space between heading and icon */
+        font-size: 1em; 
+    }
+
+    .data, .weather {
+        position: absolute;
+        margin: 10px;
+        background: rgb(255, 255, 255, 0.7);
+        width: 300px;
+        border: 1px solid rgb(179, 169, 169);
+    }
+
+    .data {
+        top: 140px;
+        left: 15px;
+    }
+
+    .weather {
+        bottom: 15px;
+        right: 15px
+    }
+
+    .weather p {
+        margin: 0;
+    }
+
+    .data h2, .weather h2 {
+        background: rgb(211, 7, 49);
+        color: white;
+    }
+
+    .hero img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+}
