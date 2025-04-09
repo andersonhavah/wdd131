@@ -29,14 +29,14 @@ p {
 
 h1 {
     text-align: center;
-    background-color: rgb(193, 160, 224);
+    background-color: #c1a0e0;
     width: 100%;
-    margin: 1rem auto;
+    margin: 0 auto;
     padding: 1rem;
 }
 
 footer {
-    background-color: rgb(193, 160, 224);
+    background-color: #c1a0e0;
     text-align: center;
     width: 100%;
     padding: 1rem;
