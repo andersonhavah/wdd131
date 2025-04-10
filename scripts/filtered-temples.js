@@ -253,7 +253,4 @@ navLinks.forEach(link => {
 
 // Initialize by displaying all temples
 displayTemples(() => true);
-
-
-
 */
