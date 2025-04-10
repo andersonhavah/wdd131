@@ -99,7 +99,7 @@ main .image-container {
 }
 
 main .image-container img {
-    width: 250px;
+    width: 300px;
     height: 150px;
     margin: .5rem;
     box-shadow: 0 0 30px #777;
@@ -118,6 +118,8 @@ footer {
     margin: 0 auto;
     margin-top: 1rem;
     padding: 5px;
+    height: auto;
+    width: 100%;
 }
 
 footer p {
