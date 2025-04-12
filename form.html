@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/form-small.css">
+    <link rel="stylesheet" href="styles/form-large.css">
+
+    <meta name="description" content="Product Review Form">
+    <meta name="author" content="Anderson Havah">
+
+    <!-- JavaScript Files -->
+    <script src="scripts/form.js" defer></script>
+    <script src="scripts/product-footer.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form action="review.html" method="get">
+            <!-- Product Name -->
+            <label for="product">Product Name:</label>
+            <select id="product" name="product" required>
+                <option value="" disabled selected>Select a Product ...</option>
+            </select>
+
+            <!-- Overall Rating -->
+            <fieldset>
+                <legend>Overall Rating</legend>
+                <div class="star-rating">
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1">&star;</label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2">&star;&star;</label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3">&star;&star;&star;</label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4">&star;&star;&star;&star;</label>
+                    <input type="radio" id="star5" name="rating" value="5" required><label for="star5">&star;&star;&star;&star;&star;</label>
+                </div>
+            </fieldset>
+
+            <!-- Date of Installation -->
+            <label for="install-date">Date of Installation</label>
+            <input type="date" id="install-date" name="install-date" required>
+
+            <!-- Useful Features -->
+            <fieldset>
+                <legend>Which features did you find useful in the product? (Check all that apply)</legend>
+                <label><input type="checkbox" id="feature1" name="features" value="easy-install"> Durability</label>
+                <label><input type="checkbox" id="feature2" name="features" value="durable"> Ease of Use</label>
+                <label><input type="checkbox" id="feature3" name="features" value="high-performance"> Performance</label>
+                <label><input type="checkbox" id="feature4" name="features" value="eco-friendly"> Design</label>
+            </fieldset>
+
+            <!-- Written Review -->
+            <label for="review">Written Review <span id="optional">(Optional)</span></label>
+            <textarea id="review" name="review" rows="4" cols="40" placeholder="Write your review here..."></textarea>
+
+            <!-- User Name -->
+            <label for="username">Your Name <span id="optional">(Optional)</span></label>
+            <input type="text" id="username" name="username" placeholder="eg: Anderson Havah" pattern="[A-Za-z\s]{1,20}" title="Only letters and spaces are allowed. Max 20 characters." maxlength="20">
+
+            <!-- Submit -->
+            <input type="submit" value="Post Review" class="submit-button">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> - Anderson Havah - Togo</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
+</html>
