@@ -80,7 +80,7 @@ input[type="checkbox"] {
     margin-right: 0.5rem;
 }
 
-#optional {
+.optional {
     font-weight: normal;
     font-style: italic;
     font-size: 0.9rem;
