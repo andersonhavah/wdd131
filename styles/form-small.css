@@ -67,7 +67,7 @@ fieldset {
 }
 
 .star-rating input[type="radio"] {
-    display: none;
+    flex-direction: row;
 }
 
 .star-rating label {
@@ -110,6 +110,6 @@ footer {
     background-color: #3d003d;
     color: white;
     text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
+    padding: 0.5rem;
+    font-size: 1rem;
 }
