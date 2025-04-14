@@ -28,15 +28,4 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.error("Review count display element not found!");
     }
-
-    // Footer year and last modified date (already in HTML script block, but can be here too)
-    // Optional: Move the footer script from HTML here if preferred
-    // const yearSpan = document.getElementById('currentyear');
-    // const modifiedSpan = document.getElementById('lastModified');
-    // if (yearSpan) {
-    //     yearSpan.textContent = new Date().getFullYear();
-    // }
-    // if (modifiedSpan) {
-    //     modifiedSpan.textContent = document.lastModified;
-    // }
 });

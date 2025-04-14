@@ -95,7 +95,7 @@ input[type="checkbox"] {
 .submit-button {
     display: block;
     width: 100%;
-    padding: 1rem;
+    padding: 0.8rem;
     margin-top: 1.5rem;
     background-color: #f3f0f6;
     color: #000;
@@ -109,6 +109,10 @@ input[type="checkbox"] {
 
 .submit-button:hover {
     background-color: #ddd;
+}
+
+.features legend {
+    line-height: 1.5;
 }
 
 .review-page {
