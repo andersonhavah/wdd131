@@ -21,6 +21,17 @@
         padding: 1.3rem;
     }
 
+    .review-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 4.5rem;
+    }
+
+    .review-page p {
+        font-size: 1.5rem;
+    }
+
     .star-rating label {
         font-size: 2rem;
     }
