@@ -1,0 +1,344 @@
+/* css/style.css - Base Styles (Mobile First) */
+
+/* --- CSS Variables --- */
+:root {
+    --primary-color: #006A4E; /* Deep Green */
+    --secondary-color: #FCD116; /* Golden Yellow */
+    --background-color: #F5F5DC; /* Warm Beige */
+    --text-color: #333333; /* Dark Gray */
+    --card-background: #FFFFFF; /* White */
+    --footer-background: #333333; /* Dark Gray for Footer */
+    --footer-text: #E0E0E0; /* Light Gray for Footer Text */
+    --heading-font: 'Merriweather', serif;
+    --body-font: 'Lato', sans-serif;
+    --container-padding: 5px;
+    --container-max-width: 1200px; /* Max width for larger screens */
+}
+
+* --- Basic Reset & Body Styling --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure footer stays at bottom */
+}
+
+main {
+    flex-grow: 1; /* Allows main content to expand */
+}
+
+.logo img {
+    max-width: 50px; /* Logo size */
+    height: 50px
+    border-radius: 5px; /* Rounded corners for logo */
+}
+
+/* --- Container --- */
+.container {
+    width: 90%;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+/* --- Typography --- */
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin-bottom: 0.8em;
+    line-height: 1.3;
+}
+
+h1 { font-size: 2.2em; } /* Main page titles */
+h2 { font-size: 1.8em; } /* Section titles */
+h3 { font-size: 1.4em; } /* Card titles */
+
+.page-title { /* Specific style for main page titles */
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+.page-intro { /* Specific style for intro text on pages */
+    text-align: center;
+    margin-bottom: 1.5em;
+    font-size: 1.1em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+ul {
+    list-style-position: inside;
+    margin-bottom: 1em;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* --- Header & Navigation --- */
+.site-header {
+    background-color: var(--primary-color);
+    color: var(--card-background);
+    padding: 1em 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky; /* Make header sticky */
+    top: 0;
+    z-index: 100; /* Ensure header is above other content */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-family: var(--heading-font);
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--card-background);
+    text-decoration: none;
+}
+.logo a:hover, .logo a:focus {
+    color: var(--secondary-color);
+}
+
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+    display: block; /* Show on mobile */
+    background: none;
+    border: none;
+    color: var(--card-background);
+    font-size: 1.8em;
+    cursor: pointer;
+}
+.menu-toggle:hover, .menu-toggle:focus {
+     color: var(--secondary-color);
+}
+
+/* Navigation List - Hidden by default on mobile */
+.main-nav {
+    display: none; /* Hidden initially */
+    width: 100%;
+    position: absolute;
+    top: 100%; /* Position below header */
+    left: 0;
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Add shadow for dropdown */
+}
+/* Style shown when toggled via JS */
+.main-nav.is-open {
+    display: block;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.main-nav ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.main-nav ul li:last-child {
+    border-bottom: none;
+}
+
+.main-nav ul li a {
+    display: block;
+    padding: 1em;
+    color: var(--card-background);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a:focus,
+.main-nav ul li a.active { /* Style for active page link */
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--secondary-color);
+}
+
+/* --- Main Content & Sections --- */
+main.container {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.hero-section { /* Styles specific to index.html */
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.hero-image img { /* Styles specific to index.html */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card { /* Reusable card style */
+    background-color: var(--card-background);
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+#dish-of-the-week img { /* Styles specific to index.html */
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+.staples-list li { /* Styles specific to index.html */
+    margin-bottom: 0.5em;
+}
+
+/* --- Styles for Dishes Page (dishes.html) --- */
+.filter-controls {
+    margin-bottom: 2em;
+    text-align: center;
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+    justify-content: center; /* Center buttons */
+    gap: 0.5em; /* Space between buttons */
+}
+
+.filter-button {
+    padding: 0.6em 1.2em;
+    font-family: var(--body-font);
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid var(--primary-color);
+    background-color: var(--card-background);
+    color: var(--primary-color);
+    border-radius: 20px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+    background-color: var(--primary-color);
+    color: var(--card-background);
+}
+
+.filter-button.active { /* Style for the active filter */
+    background-color: var(--primary-color);
+    color: var(--card-background);
+    border-color: var(--primary-color);
+}
+
+.dishes-gallery {
+    display: grid; /* Use grid for layout */
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 1.5em; /* Space between cards */
+}
+
+.dish-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    overflow: hidden; /* Ensure image corners are rounded */
+    display: flex;
+    flex-direction: column;
+}
+
+.dish-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Cover the area, cropping if needed */
+    display: block;
+}
+
+.dish-card-content {
+    padding: 1em;
+    flex-grow: 1; /* Allow content to take remaining space */
+}
+
+.dish-card h3 {
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 0.5em;
+    font-size: 1.3em;
+}
+
+.dish-card p {
+    font-size: 0.95em;
+    margin-bottom: 0; /* Remove default bottom margin */
+}
+
+.loading-message { /* Style for the loading text */
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    padding: 2em;
+}
+
+
+/* --- Footer --- */
+.site-footer {
+    background-color: var(--footer-background);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 1.5em 0;
+    margin-top: auto; /* Pushes footer to bottom */
+}
+
+.site-footer p {
+    margin-bottom: 0.5em;
+}
+
+.site-footer a {
+    color: var(--secondary-color);
+}
+.site-footer a:hover, .site-footer a:focus {
+    color: var(--card-background);
+}
+
+/* --- Accessibility --- */
+/* Basic focus outline for keyboard navigation */
+a:focus, button:focus {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 2px;
+    border-radius: 2px; /* Add slight radius to outline */
+}
+/* Screen Reader Only Text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

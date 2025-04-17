@@ -1,0 +1,84 @@
+/* css/desktop.css - Styles for Larger Screens (min-width: 768px) */
+
+/* --- Header & Navigation (Desktop) --- */
+@media screen and (min-width: 768px) {
+    .menu-toggle {
+        display: none; /* Hide hamburger menu on desktop */
+    }
+
+    .main-nav {
+        display: block; /* Show nav links */
+        position: static; /* Reset positioning */
+        width: auto; /* Allow nav to size naturally */
+        background-color: transparent; /* Remove mobile background */
+    }
+
+    .main-nav ul {
+        display: flex; /* Arrange links horizontally */
+        gap: 1.5em; /* Space between links */
+    }
+
+    .main-nav ul li {
+        border-bottom: none; /* Remove mobile borders */
+    }
+
+    .main-nav ul li a {
+        padding: 0.5em 0; /* Adjust padding */
+        font-weight: normal;
+    }
+    .main-nav ul li a:hover,
+    .main-nav ul li a:focus,
+    .main-nav ul li a.active {
+        background-color: transparent; /* Remove mobile hover background */
+        color: var(--secondary-color);
+        border-bottom: 2px solid var(--secondary-color); /* Add underline effect */
+    }
+}
+
+/* --- Layout Adjustments (Desktop) --- */
+@media screen and (min-width: 768px) {
+    .hero-section {
+        display: flex; /* Arrange image and text side-by-side */
+        align-items: center;
+        gap: 2em; /* Space between image and text */
+        text-align: left; /* Align text to the left */
+    }
+
+    .hero-image {
+        flex-basis: 50%; /* Assign width to image container */
+        margin-bottom: 0; /* Remove bottom margin */
+    }
+
+    .hero-text {
+        flex-basis: 50%; /* Assign width to text container */
+    }
+
+    .content-wrapper {
+        display: flex; /* Arrange cards side-by-side */
+        gap: 1.5em; /* Space between cards */
+    }
+
+    #dish-of-the-week,
+    #staples {
+        flex-basis: 50%; /* Each card takes half the width */
+        margin-bottom: 0; /* Remove bottom margin as they are side-by-side */
+    }
+
+    .staples-list {
+        /* Optional: Arrange list items in columns */
+        columns: 2;
+        column-gap: 1em;
+    }
+}
+
+/* --- Larger Desktop Adjustments (Optional) --- */
+@media screen and (min-width: 1024px) {
+    h1 { font-size: 2.5em; }
+    h2 { font-size: 2em; }
+    h3 { font-size: 1.5em; }
+
+    .container {
+        width: 85%; /* Slightly wider container on very large screens */
+    }
+}
+

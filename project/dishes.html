@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Anderson Havah">
+    <title>Taste of Togo | Home Page</title>
+
+    <!-- Imported Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz@0,18..144;1,18..144&display=swap"
+        rel="stylesheet">
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.ico" />
+
+    <!-- Meta Tag -->
+    <meta name="description" content="Taste of Togo ">
+    <meta name="keywords"
+        content="Togo, Togolese cuisine, restaurant, authentic, traditional dishes, fresh ingredients, spices, dining experience, culture">
+
+    <!-- Scripts -->
+    <script src="scripts/home.js" defer></script>
+
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="images/logo.webp" alt="logo of Taste of Togo">
+                <a href="index.html">Taste of Togo</a>
+            </div>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                &#9776; </button>
+            <nav class="main-nav" id="main-nav" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="dishes.html">Dishes</a></li>
+                    <li><a href="find-food.html">Find Food</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">Explore Togolese Dishes</h1>
+        <p class="page-intro">Discover some of the most popular and delicious dishes Togo has to offer. Use the filters
+            below to explore by main ingredient.</p>
+
+        <section class="filter-controls" aria-label="Dish Filters">
+            <h2 class="sr-only">Filter Dishes</h2> <button class="filter-button active" data-filter="all">All
+                Dishes</button>
+            <button class="filter-button" data-filter="maize">Maize-Based</button>
+            <button class="filter-button" data-filter="yam">Yam/Cassava</button>
+            <button class="filter-button" data-filter="chicken">Chicken</button>
+            <button class="filter-button" data-filter="vegetarian">Vegetarian</button>
+        </section>
+
+        <section id="dishes-gallery" class="dishes-gallery" aria-live="polite">
+            <p class="loading-message">Loading dishes...</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Taste of Togo. All rights reserved.</p>
+            <p><a href="references.html">Content & Image References</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
