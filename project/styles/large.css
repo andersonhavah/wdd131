@@ -33,6 +33,7 @@
         color: var(--secondary-color);
         border-bottom: 2px solid var(--secondary-color); /* Add underline effect */
     }
+
 }
 
 /* --- Layout Adjustments (Desktop) --- */
@@ -69,6 +70,12 @@
         columns: 2;
         column-gap: 1em;
     }
+
+    /* --- Dishes Page Specific Layout --- */
+    .dishes-gallery {
+        /* Display cards in a 2-column grid on medium screens */
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* --- Larger Desktop Adjustments (Optional) --- */
@@ -79,6 +86,12 @@
 
     .container {
         width: 85%; /* Slightly wider container on very large screens */
+    }
+
+    /* --- Dishes Page Layout on Large Screens --- */
+    .dishes-gallery {
+        /* Display cards in a 3-column grid on large screens */
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 

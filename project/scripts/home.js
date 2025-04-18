@@ -1,73 +1,69 @@
-// js/script.js
+// js/script.js - UPDATED
 
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Dynamic Dish of the Week ---
-    const dishes = [
+
+    // --- Reusable Data: All Dishes ---
+    // Added tags for filtering
+    const allDishes = [
         {
+            id: 1,
             name: "Fufu with Peanut Sauce",
             description: "A staple food made from pounded yams or cassava, served with a rich and savory groundnut (peanut) soup.",
             imageSrc: "images/fufu-peanut-soup-medium.webp",
-            altText: "Bowl of fufu with peanut sauce"
+            altText: "Bowl of fufu with peanut sauce",
+            tags: ['yam', 'cassava', 'soup', 'staple']
         },
         {
+            id: 2,
             name: "Gboma Dessi",
             description: "Gboma Dessi, a flavorful spinach and tomato stew with fried fish often paired with a corn dough dish, similar to polenta.",
             imageSrc: "images/gboma-dessi.webp",
-            altText: "Gboma Dessi sauce with fried fish"
+            altText: "Gboma Dessi sauce with fried fish",
+            tags: ['maize', 'stew', 'vegetarian', 'staple'] // Assuming Gboma Dessi can be vegetarian
         },
         {
+            id: 3,
             name: "Koklo Meme (Grilled Chicken)",
             description: "Deliciously marinated and grilled chicken, often seasoned with local spices and served with various sides.",
             imageSrc: "images/koklo-meme.webp",
-            altText: "Grilled chicken pieces with spices"
+            altText: "Grilled chicken pieces with spices",
+            tags: ['chicken', 'grill']
         },
         {
+            id: 4,
             name: "Ablo",
             description: "Steamed corn and rice flour cakes, slightly sweet and often enjoyed with savory sauces or as a snack.",
             imageSrc: "https://placehold.co/600x300/cccccc/333333?text=Ablo+Cakes",
-            altText: "Steamed Ablo cakes"
+            altText: "Steamed Ablo cakes",
+            tags: ['maize', 'rice', 'vegetarian', 'snack']
+        },
+        {
+            id: 5,
+            name: "Dékoudéssi (Palm Nut Soup)",
+            description: "A rich, flavorful soup made from palm fruit pulp, often cooked with fish or meat.",
+            imageSrc: "https://placehold.co/600x300/8B4513/ffffff?text=Palm+Nut+Soup",
+            altText: "Bowl of dark red palm nut soup",
+            tags: ['soup', 'palm'] // Can add 'fish' or 'meat' if specific version
+        },
+        {
+            id: 6,
+            name: "Ayimolou",
+            description: "A simple yet popular dish of rice and beans cooked together, often served with tomato stew or fried fish.",
+            imageSrc: "https://placehold.co/600x300/A0522D/ffffff?text=Ayimolou",
+            altText: "Plate of rice and beans cooked together",
+            tags: ['rice', 'beans', 'vegetarian', 'staple']
+        },
+         {
+            id: 7,
+            name: "Fried Yams (Ignames Frites)",
+            description: "Slices or chunks of yam deep-fried until golden brown, often served with a spicy pepper sauce (piment).",
+            imageSrc: "https://placehold.co/600x300/FFBF00/333333?text=Fried+Yams",
+            altText: "Pile of golden fried yam sticks",
+            tags: ['yam', 'fried', 'vegetarian', 'snack', 'side']
         }
-        
+        // Add more dishes with appropriate tags
     ];
 
-    // Function to display a random dish
-    function displayRandomDish() {
-        const dishContent = document.getElementById('dish-content');
-        if (!dishContent) return; // Exit if element not found
-
-        const nameElement = document.getElementById('dish-name');
-        const descriptionElement = document.getElementById('dish-description');
-        const imageElement = document.getElementById('dish-image');
-
-        if (nameElement && descriptionElement && imageElement && dishes.length > 0) {
-            // Select a random dish
-            const randomIndex = Math.floor(Math.random() * dishes.length);
-            const selectedDish = dishes[randomIndex];
-
-            // Update the DOM elements
-            nameElement.textContent = selectedDish.name;
-            descriptionElement.textContent = selectedDish.description;
-            imageElement.src = selectedDish.imageSrc;
-            imageElement.alt = selectedDish.altText;
-        } else {
-            // Fallback if elements are missing or no dishes defined
-            if (nameElement) nameElement.textContent = "Featured Dish";
-            if (descriptionElement) descriptionElement.textContent = "Check back soon for our featured Togolese dish!";
-            if (imageElement) {
-                 imageElement.src = 'https://placehold.co/600x300/cccccc/555555?text=Dish+Info+Unavailable';
-                 imageElement.alt = 'Placeholder for featured dish';
-            }
-        }
-    }
-
-    // Call the function to display the dish when the page loads
-    displayRandomDish();
-
-    // --- Dynamic Copyright Year ---
-    const yearSpan = document.getElementById('current-year');
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-    }
 
     // --- Mobile Menu Toggle ---
     const menuToggle = document.getElementById('menu-toggle');
@@ -82,9 +78,128 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Dynamic Copyright Year ---
+    const yearSpan = document.getElementById('current-year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+
+
+    // --- Home Page Specific Logic ---
+    const dishContentElement = document.getElementById('dish-content');
+    if (dishContentElement) { // Check if we are on the Home page
+        // Function to display a random dish (using the allDishes array)
+        function displayRandomDish() {
+            const nameElement = document.getElementById('dish-name');
+            const descriptionElement = document.getElementById('dish-description');
+            const imageElement = document.getElementById('dish-image');
+
+            if (nameElement && descriptionElement && imageElement && allDishes.length > 0) {
+                const randomIndex = Math.floor(Math.random() * allDishes.length);
+                const selectedDish = allDishes[randomIndex];
+
+                nameElement.textContent = selectedDish.name;
+                descriptionElement.textContent = selectedDish.description;
+                imageElement.src = selectedDish.imageSrc;
+                imageElement.alt = selectedDish.altText;
+            } else {
+                // Fallback if elements are missing or no dishes defined
+                if (nameElement) nameElement.textContent = "Featured Dish";
+                if (descriptionElement) descriptionElement.textContent = "Check back soon for our featured Togolese dish!";
+                if (imageElement) {
+                    imageElement.src = 'https://placehold.co/600x300/cccccc/555555?text=Dish+Info+Unavailable';
+                    imageElement.alt = 'Placeholder for featured dish';
+                }
+            }
+        }
+        // Call the function to display the dish when the page loads
+        displayRandomDish();
+    }
+
+
+    // --- Dishes Page Specific Logic ---
+    const dishesGallery = document.getElementById('dishes-gallery');
+    const filterButtons = document.querySelectorAll('.filter-button');
+
+    if (dishesGallery && filterButtons.length > 0) { // Check if we are on the Dishes page
+
+        // Function to create and display dish cards
+        function displayDishes(dishesToDisplay) {
+            dishesGallery.innerHTML = ''; // Clear current content or loading message
+
+            if (dishesToDisplay.length === 0) {
+                dishesGallery.innerHTML = '<p class="loading-message">No dishes match the selected filter.</p>';
+                return;
+            }
+
+            dishesToDisplay.forEach(dish => {
+                // Create elements for the dish card
+                const card = document.createElement('article');
+                card.className = 'dish-card';
+
+                const image = document.createElement('img');
+                image.src = dish.imageSrc;
+                image.alt = dish.altText;
+                // Basic lazy loading attribute (browser native)
+                image.loading = 'lazy';
+                 // Add onerror handler for images
+                image.onerror = function() {
+                    this.onerror = null; // Prevent infinite loop if placeholder also fails
+                    this.src = 'https://placehold.co/600x200/cccccc/555555?text=Image+Error';
+                    this.alt = 'Error loading image';
+                };
+
+
+                const contentDiv = document.createElement('div');
+                contentDiv.className = 'dish-card-content';
+
+                const nameHeading = document.createElement('h3');
+                nameHeading.textContent = dish.name;
+
+                const descriptionPara = document.createElement('p');
+                descriptionPara.textContent = dish.description;
+
+                // Append elements
+                contentDiv.appendChild(nameHeading);
+                contentDiv.appendChild(descriptionPara);
+                card.appendChild(image);
+                card.appendChild(contentDiv);
+                dishesGallery.appendChild(card);
+            });
+        }
+
+        // Function to handle filtering
+        function filterDishes(filter) {
+            let filteredDishes;
+            if (filter === 'all') {
+                filteredDishes = allDishes;
+            } else {
+                // Filter based on the tag matching the button's data-filter value
+                filteredDishes = allDishes.filter(dish => dish.tags.includes(filter));
+            }
+            displayDishes(filteredDishes);
+        }
+
+        // Add event listeners to filter buttons
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button style
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                // Get the filter value and apply filter
+                const filterValue = button.getAttribute('data-filter');
+                filterDishes(filterValue);
+            });
+        });
+
+        // Initial display of all dishes when the page loads
+        displayDishes(allDishes);
+    }
+
     // --- Future JS implementations ---
     // - Form handling for find-food.html
-    // - Dish filtering logic for dishes.html
-    // - Lazy loading for images
+    // - More sophisticated lazy loading (if needed)
+    // - Use localStorage for filter persistence?
 
 }); // End DOMContentLoaded
