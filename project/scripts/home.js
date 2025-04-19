@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 5,
             name: "Dékoudéssi (Palm Nut Soup)",
             description: "A rich, flavorful soup made from palm fruit pulp, often cooked with fish or meat.",
-            imageSrc: "https://placehold.co/600x300/8B4513/ffffff?text=Palm+Nut+Soup",
+            imageSrc: "images/palm-nut-soup.webp",
             altText: "Bowl of dark red palm nut soup",
             tags: ['soup', 'palm'] // Can add 'fish' or 'meat' if specific version
         },
@@ -49,13 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 6,
             name: "Ayimolou",
             description: "A simple yet popular dish of rice and beans cooked together, often served with tomato stew or fried fish.",
-            imageSrc: "https://placehold.co/600x300/A0522D/ffffff?text=Ayimolou",
+            imageSrc: "images/ayimolou.webp",
             altText: "Plate of rice and beans cooked together",
             tags: ['rice', 'beans', 'vegetarian', 'staple']
         },
          {
             id: 7,
-            name: "Fried Yams (Ignames Frites)",
+            name: "Koliko - Fried Yams (Ignames Frites)",
             description: "Slices or chunks of yam deep-fried until golden brown, often served with a spicy pepper sauce (piment).",
             imageSrc: "https://placehold.co/600x300/FFBF00/333333?text=Fried+Yams",
             altText: "Pile of golden fried yam sticks",
