@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 4,
             name: "Ablo",
             description: "Steamed corn and rice flour cakes, slightly sweet and often enjoyed with savory sauces or as a snack.",
-            imageSrc: "https://placehold.co/600x300/cccccc/333333?text=Ablo+Cakes",
+            imageSrc: "images/ablo.webp",
             altText: "Steamed Ablo cakes",
             tags: ['maize', 'rice', 'vegetarian', 'snack']
         },
