@@ -4,11 +4,11 @@
 :root {
     --primary-color: #006A4E; /* Deep Green */
     --secondary-color: #FCD116; /* Golden Yellow */
-    --background-color: #F5F5DC; /* Warm Beige */
+    --background-color: #fafaf3; /* Warm Beige */
     --text-color: #333333; /* Dark Gray */
     --card-background: #FFFFFF; /* White */
-    --footer-background: #333333; /* Dark Gray for Footer */
-    --footer-text: #E0E0E0; /* Light Gray for Footer Text */
+    --footer-background: #006A4E; /* Dark Gray for Footer */
+    --footer-text: #FFFFFF; /* Light Gray for Footer Text */
     --heading-font: 'Merriweather', serif;
     --body-font: 'Lato', sans-serif;
     --container-padding: 5px;
@@ -16,6 +16,7 @@
 }
 
 * --- Basic Reset & Body Styling --- */
+/*  */
 * {
     box-sizing: border-box;
     margin: 0;
