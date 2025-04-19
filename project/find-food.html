@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Anderson Havah">
+    <title>Taste of Togo | Home Page</title>
+
+    <!-- Imported Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz@0,18..144;1,18..144&display=swap"
+        rel="stylesheet">
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- Meta Tag -->
+    <meta name="description" content="Taste of Togo ">
+    <meta name="keywords"
+        content="Togo, Togolese cuisine, restaurant, authentic, traditional dishes, fresh ingredients, spices, dining experience, culture">
+
+    <!-- Scripts -->
+    <script src="scripts/home.js" defer></script>
+
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="images/logo.webp" alt="logo of Taste of Togo">
+                <a href="index.html">Taste of Togo</a>
+            </div>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                &#9776; </button>
+            <nav class="main-nav" id="main-nav" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dishes.html" class="active">Dishes</a></li>
+                    <li><a href="find-food.html">Find Food</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <h1 class="page-title">Find Authentic Flavors</h1>
+        <p class="page-intro">Ready to explore Togolese cuisine in person? Here are some tips for finding great local food, especially around Lomé.</p>
+
+        <section class="tips-section card">
+            <h2>Tips for Finding Local Food</h2>
+            <ul>
+                <li><strong>Visit the Markets:</strong> Places like the Grand Marché in Lomé offer a vibrant atmosphere and numerous food stalls selling snacks and simple meals.</li>
+                <li><strong>Look for 'Maquis':</strong> These are often open-air, informal restaurants or bars serving popular local dishes like grilled fish, chicken, and fufu at reasonable prices.</li>
+                <li><strong>Try Street Food (with care):</strong> Togo has delicious street food like grilled corn, fried yams ('ignames frites'), doughnuts ('beignets'), and meat skewers ('brochettes'). Choose vendors that look clean and popular.</li>
+                <li><strong>Ask Locals:</strong> Don't hesitate to ask hotel staff, taxi drivers, or friendly locals for their recommendations on where to eat authentic Togolese food.</li>
+                <li><strong>Be Adventurous:</strong> Step outside the main tourist areas and explore different neighborhoods – you might find hidden culinary gems!</li>
+            </ul>
+        </section>
+
+        <section class="form-section card">
+            <h2>Share Your Finds!</h2>
+            <p>Discovered a great place for Togolese food? Share it with the community!</p>
+            
+            <div id="form-message" class="form-message" aria-live="polite"></div>
+
+            <form id="find-food-form" class="find-food-form">
+                <div class="form-group">
+                    <label for="finder-name">Your Name (Optional):</label>
+                    <input type="text" id="finder-name" name="finder_name" placeholder="E.g., Koffi A.">
+                </div>
+                <div class="form-group">
+                    <label for="location-name">Location/Restaurant Name:</label>
+                    <input type="text" id="location-name" name="location_name" placeholder="E.g., Chez Mawuli, Grand Marché Stall" required>
+                </div>
+                <div class="form-group">
+                    <label for="dish-recommendation">Dish Recommendation:</label>
+                    <input type="text" id="dish-recommendation" name="dish_recommendation" placeholder="E.g., Grilled Fish, Fufu with Peanut Soup" required>
+                </div>
+                <div class="form-group">
+                    <label for="comments">Comments/Description (Optional):</label>
+                    <textarea id="comments" name="comments" rows="4" placeholder="E.g., Best grilled fish in town! Friendly service."></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="submit-button">Share My Find</button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Taste of Togo. All rights reserved.</p>
+            <p><a href="references.html">Content & Image References</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
