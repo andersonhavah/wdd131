@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 7,
             name: "Koliko - Fried Yams (Ignames Frites)",
             description: "Slices or chunks of yam deep-fried until golden brown, often served with a spicy pepper sauce (piment).",
-            imageSrc: "https://placehold.co/600x300/FFBF00/333333?text=Fried+Yams",
+            imageSrc: "images/koliko.webp",
             altText: "Pile of golden fried yam sticks",
             tags: ['yam', 'fried', 'vegetarian', 'snack', 'side']
         }
