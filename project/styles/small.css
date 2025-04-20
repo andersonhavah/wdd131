@@ -9,6 +9,8 @@
     --card-background: #FFFFFF; /* White */
     --footer-background: #006A4E; /* Dark Gray for Footer */
     --footer-text: #FFFFFF; /* Light Gray for Footer Text */
+    --success-color: #228B22; /* Forest Green for success messages */
+    --error-color: #B22222; /* Firebrick for error messages */
     --heading-font: 'Merriweather', serif;
     --body-font: 'Lato', sans-serif;
     --container-padding: 5px;
@@ -88,6 +90,16 @@ p {
 ul {
     list-style-position: inside;
     margin-bottom: 1em;
+}
+
+/* Style lists inside the tips section */
+.tips-section ul {
+    list-style-type: disc; /* Use standard bullets */
+    padding-left: 1.5em; /* Indent list */
+}
+
+.tips-section li {
+    margin-bottom: 0.7em;
 }
 
 a {

@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: "Ablo",
             description: "Steamed corn and rice flour cakes, slightly sweet and often enjoyed with savory sauces or as a snack.",
             imageSrc: "images/ablo.webp",
-            altText: "Steamed Ablo cakes",
+            altText: "Steamed Ablo cakes with chicken and sauce",
             tags: ['maize', 'rice', 'vegetarian', 'snack']
         },
         {
