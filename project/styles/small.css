@@ -2,22 +2,33 @@
 
 /* --- CSS Variables --- */
 :root {
-    --primary-color: #006A4E; /* Deep Green */
-    --secondary-color: #FCD116; /* Golden Yellow */
-    --background-color: #fafaf3; /* Warm Beige */
-    --text-color: #333333; /* Dark Gray */
-    --card-background: #FFFFFF; /* White */
-    --footer-background: #006A4E; /* Dark Gray for Footer */
-    --footer-text: #FFFFFF; /* Light Gray for Footer Text */
-    --success-color: #228B22; /* Forest Green for success messages */
-    --error-color: #B22222; /* Firebrick for error messages */
+    --primary-color: #006A4E;
+    /* Deep Green */
+    --secondary-color: #FCD116;
+    /* Golden Yellow */
+    --background-color: #fafaf3;
+    /* Warm Beige */
+    --text-color: #333333;
+    /* Dark Gray */
+    --card-background: #FFFFFF;
+    /* White */
+    --footer-background: #006A4E;
+    /* Dark Gray for Footer */
+    --footer-text: #FFFFFF;
+    /* Light Gray for Footer Text */
+    --success-color: #228B22;
+    /* Forest Green for success messages */
+    --error-color: #B22222;
+    /* Firebrick for error messages */
     --heading-font: 'Merriweather', serif;
     --body-font: 'Lato', sans-serif;
     --container-padding: 5px;
-    --container-max-width: 1200px; /* Max width for larger screens */
+    --container-max-width: 1200px;
+    /* Max width for larger screens */
 }
 
 * --- Basic Reset & Body Styling --- */
+
 /*  */
 * {
     box-sizing: border-box;
@@ -36,17 +47,21 @@ body {
     line-height: 1.6;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure footer stays at bottom */
+    min-height: 100vh;
+    /* Ensure footer stays at bottom */
 }
 
 main {
-    flex-grow: 1; /* Allows main content to expand */
+    flex-grow: 1;
+    /* Allows main content to expand */
 }
 
 .logo img {
-    max-width: 50px; /* Logo size */
+    max-width: 50px;
+    /* Logo size */
     height: 50px;
-    border-radius: 5px; /* Rounded corners for logo */
+    border-radius: 5px;
+    /* Rounded corners for logo */
 }
 
 /* --- Container --- */
@@ -58,23 +73,39 @@ main {
 }
 
 /* --- Typography --- */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--heading-font);
     color: var(--primary-color);
     margin-bottom: 0.8em;
     line-height: 1.3;
 }
 
-h1 { font-size: 2.2em; } /* Main page titles */
-h2 { font-size: 1.8em; } /* Section titles */
-h3 { font-size: 1.4em; } /* Card titles */
+h1 {
+    font-size: 2.2em;
+}
 
-.page-title { /* Specific style for main page titles */
+/* Main page titles */
+h2 {
+    font-size: 1.8em;
+}
+
+/* Section titles */
+h3 {
+    font-size: 1.4em;
+}
+
+/* Card titles */
+
+.page-title {
+    /* Specific style for main page titles */
     margin-top: 0.5em;
     text-align: center;
 }
 
-.page-intro { /* Specific style for intro text on pages */
+.page-intro {
+    /* Specific style for intro text on pages */
     text-align: center;
     margin-bottom: 1.5em;
     font-size: 1.1em;
@@ -94,8 +125,10 @@ ul {
 
 /* Style lists inside the tips section */
 .tips-section ul {
-    list-style-type: disc; /* Use standard bullets */
-    padding-left: 1.5em; /* Indent list */
+    list-style-type: disc;
+    /* Use standard bullets */
+    padding-left: 1.5em;
+    /* Indent list */
 }
 
 .tips-section li {
@@ -107,7 +140,8 @@ a {
     text-decoration: none;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
     color: var(--secondary-color);
     text-decoration: underline;
 }
@@ -117,10 +151,12 @@ a:hover, a:focus {
     background-color: var(--primary-color);
     color: var(--card-background);
     padding: 1em 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: sticky; /* Make header sticky */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    /* Make header sticky */
     top: 0;
-    z-index: 100; /* Ensure header is above other content */
+    z-index: 100;
+    /* Ensure header is above other content */
 }
 
 .header-container {
@@ -136,33 +172,42 @@ a:hover, a:focus {
     color: var(--card-background);
     text-decoration: none;
 }
-.logo a:hover, .logo a:focus {
+
+.logo a:hover,
+.logo a:focus {
     color: var(--secondary-color);
 }
 
 /* Mobile Menu Toggle Button */
 .menu-toggle {
-    display: block; /* Show on mobile */
+    display: block;
+    /* Show on mobile */
     background: none;
     border: none;
     color: var(--card-background);
     font-size: 1.8em;
     cursor: pointer;
 }
-.menu-toggle:hover, .menu-toggle:focus {
-     color: var(--secondary-color);
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+    color: var(--secondary-color);
 }
 
 /* Navigation List - Hidden by default on mobile */
 .main-nav {
-    display: none; /* Hidden initially */
+    display: none;
+    /* Hidden initially */
     width: 100%;
     position: absolute;
-    top: 100%; /* Position below header */
+    top: 100%;
+    /* Position below header */
     left: 0;
     background-color: var(--primary-color);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Add shadow for dropdown */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Add shadow for dropdown */
 }
+
 /* Style shown when toggled via JS */
 .main-nav.is-open {
     display: block;
@@ -178,6 +223,7 @@ a:hover, a:focus {
 .main-nav ul li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+
 .main-nav ul li:last-child {
     border-bottom: none;
 }
@@ -192,7 +238,8 @@ a:hover, a:focus {
 
 .main-nav ul li a:hover,
 .main-nav ul li a:focus,
-.main-nav ul li a.active { /* Style for active page link */
+.main-nav ul li a.active {
+    /* Style for active page link */
     background-color: rgba(255, 255, 255, 0.1);
     color: var(--secondary-color);
 }
@@ -203,35 +250,40 @@ main.container {
     padding-bottom: 2em;
 }
 
-.hero-section { /* Styles specific to index.html */
+.hero-section {
+    /* Styles specific to index.html */
     margin-bottom: 2em;
     text-align: center;
 }
 
-.hero-image img { /* Styles specific to index.html */
+.hero-image img {
+    /* Styles specific to index.html */
     max-width: 100%;
     height: auto;
     border-radius: 8px;
     margin-bottom: 1em;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.card { /* Reusable card style */
+.card {
+    /* Reusable card style */
     background-color: var(--card-background);
     padding: 1.5em;
     margin-bottom: 1.5em;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
 }
 
-#dish-of-the-week img { /* Styles specific to index.html */
+#dish-of-the-week img {
+    /* Styles specific to index.html */
     max-width: 100%;
     height: auto;
     border-radius: 5px;
     margin-bottom: 1em;
 }
 
-.staples-list li { /* Styles specific to index.html */
+.staples-list li {
+    /* Styles specific to index.html */
     margin-bottom: 0.5em;
 }
 
@@ -239,10 +291,14 @@ main.container {
 .filter-controls {
     margin-bottom: 2em;
     text-align: center;
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow buttons to wrap on small screens */
-    justify-content: center; /* Center buttons */
-    gap: 0.5em; /* Space between buttons */
+    display: flex;
+    /* Use flexbox for layout */
+    flex-wrap: wrap;
+    /* Allow buttons to wrap on small screens */
+    justify-content: center;
+    /* Center buttons */
+    gap: 0.5em;
+    /* Space between buttons */
 }
 
 .filter-button {
@@ -254,7 +310,8 @@ main.container {
     border: 2px solid var(--primary-color);
     background-color: var(--card-background);
     color: var(--primary-color);
-    border-radius: 20px; /* Rounded corners */
+    border-radius: 20px;
+    /* Rounded corners */
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -264,51 +321,62 @@ main.container {
     color: var(--card-background);
 }
 
-.filter-button.active { /* Style for the active filter */
+.filter-button.active {
+    /* Style for the active filter */
     background-color: var(--primary-color);
     color: var(--card-background);
     border-color: var(--primary-color);
 }
 
 .dishes-gallery {
-    display: grid; /* Use grid for layout */
-    grid-template-columns: 1fr; /* Single column on mobile */
-    gap: 1.5em; /* Space between cards */
+    display: grid;
+    /* Use grid for layout */
+    grid-template-columns: 1fr;
+    /* Single column on mobile */
+    gap: 1.5em;
+    /* Space between cards */
 }
 
 .dish-card {
     background-color: var(--card-background);
     border-radius: 8px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-    overflow: hidden; /* Ensure image corners are rounded */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* Ensure image corners are rounded */
     display: flex;
     flex-direction: column;
 }
 
 .dish-card img {
     width: 100%;
-    height: 200px; /* Fixed height for consistency */
-    object-fit: cover; /* Cover the area, cropping if needed */
+    height: 200px;
+    /* Fixed height for consistency */
+    object-fit: cover;
+    /* Cover the area, cropping if needed */
     display: block;
 }
 
 .dish-card-content {
     padding: 1em;
-    flex-grow: 1; /* Allow content to take remaining space */
+    flex-grow: 1;
+    /* Allow content to take remaining space */
 }
 
 .dish-card h3 {
-    margin-top: 0; /* Remove default top margin */
+    margin-top: 0;
+    /* Remove default top margin */
     margin-bottom: 0.5em;
     font-size: 1.3em;
 }
 
 .dish-card p {
     font-size: 0.95em;
-    margin-bottom: 0; /* Remove default bottom margin */
+    margin-bottom: 0;
+    /* Remove default bottom margin */
 }
 
-.loading-message { /* Style for the loading text */
+.loading-message {
+    /* Style for the loading text */
     text-align: center;
     font-style: italic;
     color: #666;
@@ -322,7 +390,8 @@ main.container {
     color: var(--footer-text);
     text-align: center;
     padding: 1.5em 0;
-    margin-top: auto; /* Pushes footer to bottom */
+    margin-top: auto;
+    /* Pushes footer to bottom */
 }
 
 .site-footer p {
@@ -332,26 +401,31 @@ main.container {
 .site-footer a {
     color: var(--secondary-color);
 }
-.site-footer a:hover, .site-footer a:focus {
+
+.site-footer a:hover,
+.site-footer a:focus {
     color: var(--card-background);
 }
 
 /* --- Accessibility --- */
 /* Basic focus outline for keyboard navigation */
-a:focus, button:focus {
+a:focus,
+button:focus {
     outline: 3px solid var(--secondary-color);
     outline-offset: 2px;
-    border-radius: 2px; /* Add slight radius to outline */
+    border-radius: 2px;
+    /* Add slight radius to outline */
 }
+
 /* Screen Reader Only Text */
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
