@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             altText: "Plate of rice and beans cooked together",
             tags: ['rice', 'beans', 'vegetarian', 'staple']
         },
-         {
+        {
             id: 7,
             name: "Koliko - Fried Yams (Ignames Frites)",
             description: "Slices or chunks of yam deep-fried until golden brown, often served with a spicy pepper sauce (piment).",
@@ -61,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
             altText: "Pile of golden fried yam sticks",
             tags: ['yam', 'fried', 'vegetarian', 'snack', 'side']
         }
-        // Add more dishes with appropriate tags
     ];
 
 
@@ -142,8 +141,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 image.alt = dish.altText;
                 // Basic lazy loading attribute (browser native)
                 image.loading = 'lazy';
-                 // Add onerror handler for images
-                image.onerror = function() {
+                // Add onerror handler for images
+                image.onerror = function () {
                     this.onerror = null; // Prevent infinite loop if placeholder also fails
                     this.src = 'https://placehold.co/600x200/cccccc/555555?text=Image+Error';
                     this.alt = 'Error loading image';
@@ -177,6 +176,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Filter based on the tag matching the button's data-filter value
                 filteredDishes = allDishes.filter(dish => dish.tags.includes(filter));
             }
+
+            /* Another option for the above if statement is:
+            let filteredDishes = (filter === 'all') ? allDishes : allDishes.filter(dish => dish.tags.includes(filter));
+            */
             displayDishes(filteredDishes);
         }
 
@@ -197,6 +200,74 @@ document.addEventListener('DOMContentLoaded', () => {
         displayDishes(allDishes);
     }
 
+    // --- Find Food Page Specific Logic ---
+    const findFoodForm = document.getElementById('find-food-form');
+    const formMessage = document.getElementById('form-message');
+
+    if (findFoodForm && formMessage) { // Check if we are on the Find Food page
+
+        findFoodForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent default browser submission
+
+            // Clear previous messages
+            formMessage.textContent = '';
+            formMessage.className = 'form-message'; // Reset classes
+
+            // Basic check if required fields are filled (HTML5 required handles most)
+            const locationInput = document.getElementById('location-name');
+            const dishInput = document.getElementById('dish-recommendation');
+
+            if (!locationInput.value.trim() || !dishInput.value.trim()) {
+                 formMessage.textContent = 'Please fill out the required fields (Location and Dish).';
+                 formMessage.classList.add('error');
+                 return; // Stop submission
+            }
+
+
+            // Get data from the form
+            const formData = new FormData(findFoodForm);
+            const submission = {
+                finderName: formData.get('finder_name') || 'Anonymous', // Default if empty
+                locationName: formData.get('location_name'),
+                dishRecommendation: formData.get('dish_recommendation'),
+                comments: formData.get('comments'),
+                timestamp: new Date().toISOString() // Add a timestamp
+            };
+
+            try {
+                // --- localStorage Interaction ---
+                // Retrieve existing submissions or initialize an empty array
+                let submissions = JSON.parse(localStorage.getItem('foodFinds')) || [];
+
+                // Add the new submission
+                submissions.push(submission);
+
+                // Save back to localStorage
+                localStorage.setItem('foodFinds', JSON.stringify(submissions));
+
+                // --- Display Success Message & Clear Form ---
+                formMessage.textContent = 'Thank you for sharing your find!';
+                formMessage.classList.add('success');
+                findFoodForm.reset(); // Clear the form fields
+
+                // Optional: Hide message after a few seconds
+                setTimeout(() => {
+                    formMessage.textContent = '';
+                    formMessage.className = 'form-message';
+                }, 5000); // Hide after 5 seconds
+
+            } catch (error) {
+                console.error("Error saving to localStorage:", error);
+                formMessage.textContent = 'Sorry, there was an error saving your submission. Please try again.';
+                formMessage.classList.add('error');
+                 // Handle potential storage errors (e.g., storage full)
+                 if (error.name === 'QuotaExceededError') {
+                     formMessage.textContent = 'Storage limit reached. Cannot save submission.';
+                 }
+            }
+        });
+    }
+    
     // --- Future JS implementations ---
     // - Form handling for find-food.html
     // - More sophisticated lazy loading (if needed)

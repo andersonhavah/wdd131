@@ -1,4 +1,4 @@
-/* css/desktop.css - Styles for Larger Screens (min-width: 768px) */
+/* Styles for Larger Screens (min-width: 768px) */
 
 /* --- Header & Navigation (Desktop) --- */
 @media screen and (min-width: 768px) {
@@ -11,6 +11,7 @@
         position: static; /* Reset positioning */
         width: auto; /* Allow nav to size naturally */
         background-color: transparent; /* Remove mobile background */
+        box-shadow: none; /* Remove mobile shadow */
     }
 
     .main-nav ul {
@@ -26,6 +27,7 @@
         padding: 0.5em 0; /* Adjust padding */
         font-weight: normal;
     }
+    
     .main-nav ul li a:hover,
     .main-nav ul li a:focus,
     .main-nav ul li a.active {
@@ -38,6 +40,7 @@
 
 /* --- Layout Adjustments (Desktop) --- */
 @media screen and (min-width: 768px) {
+    /* --- Home Page Specific Layout --- */
     .hero-section {
         display: flex; /* Arrange image and text side-by-side */
         align-items: center;
@@ -76,6 +79,8 @@
         /* Display cards in a 2-column grid on medium screens */
         grid-template-columns: repeat(2, 1fr);
     }
+
+    
 }
 
 /* --- Larger Desktop Adjustments (Optional) --- */

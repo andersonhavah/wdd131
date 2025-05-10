@@ -47,21 +47,17 @@ body {
     line-height: 1.6;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    /* Ensure footer stays at bottom */
+    min-height: 100vh; /* Ensure footer stays at bottom */
 }
 
 main {
-    flex-grow: 1;
-    /* Allows main content to expand */
+    flex-grow: 1; /* Allows main content to expand */
 }
 
 .logo img {
-    max-width: 50px;
-    /* Logo size */
-    height: 50px;
-    border-radius: 5px;
-    /* Rounded corners for logo */
+    max-width: 60px; /* Logo size */
+    height: 60px;
+    border-radius: 5px; /* Rounded corners for logo */
 }
 
 /* --- Container --- */
@@ -152,11 +148,9 @@ a:focus {
     color: var(--card-background);
     padding: 1em 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    /* Make header sticky */
+    position: sticky; /* Make header sticky */
     top: 0;
-    z-index: 100;
-    /* Ensure header is above other content */
+    z-index: 100; /* Ensure header is above other content */
 }
 
 .header-container {
@@ -165,23 +159,22 @@ a:focus {
     align-items: center;
 }
 
-.logo a {
+.logo #site-name {
     font-family: var(--heading-font);
     font-size: 1.8em;
     font-weight: bold;
     color: var(--card-background);
-    text-decoration: none;
+    padding: 0.5rem;
 }
 
-.logo a:hover,
+/* .logo a:hover,
 .logo a:focus {
     color: var(--secondary-color);
-}
+} */
 
 /* Mobile Menu Toggle Button */
 .menu-toggle {
-    display: block;
-    /* Show on mobile */
+    display: block; /* Show on mobile */
     background: none;
     border: none;
     color: var(--card-background);
@@ -196,16 +189,13 @@ a:focus {
 
 /* Navigation List - Hidden by default on mobile */
 .main-nav {
-    display: none;
-    /* Hidden initially */
+    display: none; /* Hidden initially */
     width: 100%;
     position: absolute;
-    top: 100%;
-    /* Position below header */
+    top: 100%; /* Position below header */
     left: 0;
     background-color: var(--primary-color);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Add shadow for dropdown */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for dropdown */
 }
 
 /* Style shown when toggled via JS */
@@ -292,13 +282,9 @@ main.container {
     margin-bottom: 2em;
     text-align: center;
     display: flex;
-    /* Use flexbox for layout */
-    flex-wrap: wrap;
-    /* Allow buttons to wrap on small screens */
-    justify-content: center;
-    /* Center buttons */
-    gap: 0.5em;
-    /* Space between buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+    justify-content: center; /* Center buttons */
+    gap: 0.5em; /* Space between buttons */
 }
 
 .filter-button {
@@ -310,8 +296,7 @@ main.container {
     border: 2px solid var(--primary-color);
     background-color: var(--card-background);
     color: var(--primary-color);
-    border-radius: 20px;
-    /* Rounded corners */
+    border-radius: 20px; /* Rounded corners */
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -321,50 +306,41 @@ main.container {
     color: var(--card-background);
 }
 
-.filter-button.active {
-    /* Style for the active filter */
+.filter-button.active { /* Style for the active filter */
     background-color: var(--primary-color);
     color: var(--card-background);
     border-color: var(--primary-color);
 }
 
 .dishes-gallery {
-    display: grid;
-    /* Use grid for layout */
-    grid-template-columns: 1fr;
-    /* Single column on mobile */
-    gap: 1.5em;
-    /* Space between cards */
+    display: grid; /* Use grid for layout */
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 1.5em; /* Space between cards */
 }
 
 .dish-card {
     background-color: var(--card-background);
     border-radius: 8px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    /* Ensure image corners are rounded */
+    overflow: hidden;/* Ensure image corners are rounded */
     display: flex;
     flex-direction: column;
 }
 
 .dish-card img {
     width: 100%;
-    height: 200px;
-    /* Fixed height for consistency */
-    object-fit: cover;
-    /* Cover the area, cropping if needed */
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover;/* Cover the area, cropping if needed */
     display: block;
 }
 
 .dish-card-content {
     padding: 1em;
-    flex-grow: 1;
-    /* Allow content to take remaining space */
+    flex-grow: 1; /* Allow content to take remaining space */
 }
 
 .dish-card h3 {
-    margin-top: 0;
-    /* Remove default top margin */
+    margin-top: 0;/* Remove default top margin */
     margin-bottom: 0.5em;
     font-size: 1.3em;
 }
@@ -375,14 +351,95 @@ main.container {
     /* Remove default bottom margin */
 }
 
-.loading-message {
-    /* Style for the loading text */
+.loading-message { /* Style for the loading text */
     text-align: center;
     font-style: italic;
     color: #666;
     padding: 2em;
 }
 
+/* --- Styles for Find Food Page (find-food.html) --- */
+.tips-section {
+    margin-bottom: 2em;
+}
+
+.form-section {
+    margin-bottom: 2em;
+}
+
+.find-food-form .form-group {
+    margin-bottom: 1.2em; /* Space between form fields */
+}
+
+.find-food-form label {
+    display: block; /* Make label take its own line */
+    margin-bottom: 0.4em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.find-food-form input[type="text"],
+.find-food-form textarea {
+    width: 100%; /* Make inputs take full width */
+    padding: 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--body-font);
+    font-size: 1em;
+}
+
+.find-food-form input[type="text"]:focus,
+.find-food-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 106, 78, 0.3); /* Subtle glow on focus */
+}
+
+.find-food-form textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 80px;
+}
+
+.submit-button {
+    display: inline-block;
+    padding: 0.8em 1.8em;
+    font-family: var(--body-font);
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--card-background);
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+    background-color: #004d38; /* Darker green */
+    transform: translateY(-1px); /* Slight lift effect */
+}
+
+/* Form submission message styling */
+.form-message {
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    font-weight: bold;
+    display: none; /* Hidden by default */
+}
+.form-message.success {
+    background-color: #d4edda; /* Light green */
+    color: var(--success-color);
+    border: 1px solid var(--success-color);
+    display: block;
+}
+.form-message.error {
+    background-color: #f8d7da; /* Light red */
+    color: var(--error-color);
+    border: 1px solid var(--error-color);
+    display: block;
+}
 
 /* --- Footer --- */
 .site-footer {
@@ -409,23 +466,28 @@ main.container {
 
 /* --- Accessibility --- */
 /* Basic focus outline for keyboard navigation */
-a:focus,
-button:focus {
+a:focus, button:focus, input:focus, textarea:focus {
     outline: 3px solid var(--secondary-color);
     outline-offset: 2px;
-    border-radius: 2px;
-    /* Add slight radius to outline */
+    border-radius: 2px; /* Add slight radius to outline */
+}
+
+/* Apply focus styles specifically to form inputs/textarea */
+.find-food-form input[type="text"]:focus,
+.find-food-form textarea:focus {
+     outline: 3px solid var(--secondary-color);
+     outline-offset: 2px;
 }
 
 /* Screen Reader Only Text */
 .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
